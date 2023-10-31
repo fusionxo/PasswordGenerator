@@ -10,9 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const generateButton = document.getElementById('generate');
   const copyButton = document.getElementById('copy');
   const generatedPassword = document.getElementById('generatedPassword');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const body = document.body;
 
   lengthSlider.addEventListener('input', function () {
     lengthValue.textContent = lengthSlider.value;
+  });
+
+  darkModeToggle.addEventListener('change', function () {
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
   });
 
   generateButton.addEventListener('click', function () {
