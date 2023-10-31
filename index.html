@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dark-mode-switch.css">
   <title>Password Generator</title>
 </head>
 <body>
@@ -24,9 +25,17 @@
       <button id="copy">Copy to Clipboard</button>
     </div>
     <div class="password-display">
-      <input type="text" id="generatedPassword" readonly>
+      <input type="text" id="generatedPassword" class="text-dark-mode" readonly>
+    </div>
+    <div class="dark-mode-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <label for="dark-mode-toggle">
+        <span class="emoji-light">☀️</span>
+        <span class="emoji-dark">🌙</span>
+      </label>
     </div>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
